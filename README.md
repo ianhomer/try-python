@@ -8,5 +8,5 @@ Run main
 
 Run unit tests
 
-    python -m unittest foo_test.py
+    pytest
 

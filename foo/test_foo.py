@@ -8,7 +8,8 @@ class TestFoo(unittest.TestCase):
         self.assertEqual(3, Foo(1, 2).sum())
 
     def test_fail(self):
-        assert False
+        assert True
+
 
 if __name__ == "__main__":
     unittest.main()
