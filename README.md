@@ -6,7 +6,10 @@ Run main
 
     python main.py
 
-Run unit tests
+Run tests
 
     pytest
 
+Run tests with watch
+
+    ptw
