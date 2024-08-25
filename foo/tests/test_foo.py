@@ -1,5 +1,5 @@
 import unittest
-from . import Foo
+from .. import Foo
 
 
 class TestFoo(unittest.TestCase):

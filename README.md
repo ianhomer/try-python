@@ -13,3 +13,10 @@ Run tests
 Run tests with watch
 
     ptw
+
+## Notes
+
+pytest discovers non "unittest" tests. In contrast running unittest module
+direct does not pick these up.
+
+    python -m unittest
