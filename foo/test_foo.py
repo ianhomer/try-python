@@ -1,5 +1,5 @@
 import unittest
-from foo import Foo
+from . import Foo
 
 
 class TestFoo(unittest.TestCase):
@@ -7,6 +7,8 @@ class TestFoo(unittest.TestCase):
     def test_sum(self):
         self.assertEqual(3, Foo(1, 2).sum())
 
+    def test_fail(self):
+        assert False
 
 if __name__ == "__main__":
     unittest.main()
