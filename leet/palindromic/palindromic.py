@@ -1,16 +1,17 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         length = len(s)
-        best = s[0]
-        bestLength = 1
-        for i in range(len(s)):
-            for j in range(length - i - bestLength):
-                if s[i] != s[length - j - 1]:
-                    pass
-                if length - j - i > bestLength and self.isPalindrome(s, i, -j):
-                    best = s[i : length - j]
-                    bestLength = len(best)
-        return best
+        result = ""
+
+        def findPalindrome(left, right):
+            while left >= 0 and right < length and s[left] == s[right]:
+                left -= 1
+                right += 1
+            return s[left+1: right]
+
+        for i in range(length):
+            result = max(result, findPalindrome(i, i), findPalindrome(i, i+1), key=len)
+        return result
 
     def isPalindrome(self, s: str, start=0, end=0) -> bool:
         assert end < 1  # end must be a negative value to indicate distance from end
