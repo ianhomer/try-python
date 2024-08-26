@@ -5,17 +5,20 @@ class Solution:
         bestLength = 1
         for i in range(len(s)):
             for j in range(length - i - bestLength):
-                candidate = s[i : length - j]
-                if len(candidate) > bestLength and self.isPalindrome(candidate):
-                    best = candidate
+                if s[i] != s[length - j - 1]:
+                    pass
+                if length - j - i > bestLength and self.isPalindrome(s, i, -j):
+                    best = s[i : length - j]
                     bestLength = len(best)
         return best
 
-    def isPalindrome(self, s: str) -> bool:
-        if len(s) < 2:
+    def isPalindrome(self, s: str, start=0, end=0) -> bool:
+        assert end < 1  # end must be a negative value to indicate distance from end
+        length = len(s) + end - start
+        if length < 2:
             return True
-        mid = int(len(s) / 2)
+        mid = int(length / 2)
         for i in range(mid):
-            if s[i] != s[-1-i]:
+            if s[start + i] != s[-1 - i + end]:
                 return False
         return True

@@ -24,3 +24,4 @@ def test_is_palindrome():
     assert solution.isPalindrome("aba")
     assert not solution.isPalindrome("abc")
     assert solution.isPalindrome("ababa")
+    assert solution.isPalindrome("ababaX", 0, -1)
