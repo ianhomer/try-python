@@ -7,6 +7,7 @@ class Solution:
                 candidate = s[i : i + j + 1]
                 if self.isPalindrome(candidate) and len(candidate) > len(best):
                     best = candidate
+        print(best)
         return best
 
     def isPalindrome(self, s: str) -> bool:
