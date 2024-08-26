@@ -1,4 +1,7 @@
+import random
+
 # All the syntax
+# Mostly from https://www.w3schools.com/python
 
 print("syntax")
 
@@ -97,3 +100,76 @@ assert [x * 2 for x in range(5)] == [0, 2, 4, 6, 8]
 my_list = ["a", "c", "b"]
 my_list.sort()
 assert my_list == ["a", "b", "c"]
+my_list.sort(reverse=True)
+
+
+def my_fun(_):
+    return random.randint(0, 9)
+
+
+my_list.sort(key=my_fun)
+my_list.sort(key=str.lower)
+my_list.reverse()
+
+assert list(map(lambda x: x * 2, [1, 2])) == [2, 4]
+
+# Tuples
+
+my_tuple = (1, 2)
+
+# Sets
+
+my_set = {1, 2}
+
+# Dictionary
+
+my_dict = {"a": 1, "b": 2}
+assert [x for x in my_dict] == ["a", "b"]
+for x, y in my_dict.items():
+    print(x, y)
+
+# if
+
+print("hello") if True else print("never")
+
+# Lambda
+
+
+def my_lambda(n):
+    return lambda x: x * n
+
+
+doubler = my_lambda(2)
+
+print(doubler(4))
+
+# Classes
+
+
+class MyClass:
+    def __init__(self, n: int):
+        self.n = n
+
+
+class MySuperClass(MyClass):
+    def __init__(self, n, s: str):
+        MyClass.__init__(self, n)
+        self.s = s
+
+
+object = MyClass(4)
+object = MySuperClass(4, "hello")
+
+# Iterators
+
+my_tuble = (1, 2)
+my_iterator = iter(my_tuple)
+print(next(my_iterator))
+print(next(my_iterator))
+
+# Exception handling
+
+try:
+    i = 1 / 0
+except Exception as error:
+    print("No!", error)
