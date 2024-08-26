@@ -6,6 +6,7 @@ solution = Solution()
 def test_longest():
     assert solution.longestPalindrome("babad") == "bab"
     assert solution.longestPalindrome("bb") == "bb"
+    assert solution.longestPalindrome("bananas") == "anana"
 
 
 def test_time_limit():
