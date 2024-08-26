@@ -42,3 +42,15 @@ if (
     and 9 == 9
 ):
     print("it is")
+
+# Operators
+
+assert 63 % 10 == 3
+assert 63 // 10 == 6  # Floor division
+assert 2**4 == 16
+assert 4 & 3 == 0  # AND 100 & 011 == 0
+assert 4 | 3 == 7  # OR 100 | 011 == 111
+assert 4 ^ 7 == 3  # XOR 100 | 111 == 011
+assert ~5 == -6  # NOT 00000101 == 111111010
+assert 7 >> 1 == 3
+assert 7 << 1 == 14
