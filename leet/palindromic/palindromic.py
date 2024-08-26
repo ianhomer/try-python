@@ -15,4 +15,7 @@ class Solution:
         if len(s) < 2:
             return True
         mid = int(len(s) / 2)
-        return s[:mid] == s[::-1][:mid]
+        for i in range(mid):
+            if s[i] != s[-1-i]:
+                return False
+        return True
