@@ -1,0 +1,1 @@
+from .palindromic import Solution
