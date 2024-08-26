@@ -4,7 +4,7 @@ class Solution:
         best = s[0]
         for i in range(len(s)):
             for j in range(length - i):
-                candidate = s[i : i + j]
+                candidate = s[i : i + j + 1]
                 if self.isPalindrome(candidate) and len(candidate) > len(best):
                     best = candidate
         return best

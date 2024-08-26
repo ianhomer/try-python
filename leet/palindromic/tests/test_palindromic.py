@@ -3,8 +3,10 @@ from .. import Solution
 solution = Solution()
 
 
-def test_babad():
+def test_longest():
     assert solution.longestPalindrome("babad") == "bab"
+    assert solution.longestPalindrome("bb") == "bb"
+
 
 def test_is_palindrome():
     assert solution.isPalindrome("a")
